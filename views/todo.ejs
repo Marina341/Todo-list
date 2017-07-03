@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Organize </title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script> -->
+	
+<script src="/assets/todo-list.js"></script>
+<link href="/assets/style.css" rel="stylesheet" type="text/css" />
+</head>
+ 
+<body>
+	<nav>
+	 <ol>
+         <li>Welcome </li>
+		 <li><img src="../public/assets/avatar.jpg"> </li>
+	 </ol>
+	</nav>
+	<div class="verticalnav">
+		 <ol class="verticalol">
+			 <li class="verticalli">My to do</li>
+			 <li class="verticalli">My project</li>
+			 <li class="verticalli">Team</li>
+			 <li class="verticalli">Chat</li>
+			 <li class="verticalli">My performance</li>
+		</ol>
+	</div>
+    <h1> My Todo List </h1>
+	<div id="todo-table">
+	<form>
+	<input type="text" name="item" placeholder="Add new item" required />
+	<button type="submit"> Add task </button>
+	</form>
+	<ul>
+    
+    <% for(var y=0;y<todos.length;y++) {%>
+       <li class="litodo"> <%= todos[y].item %> </li>
+     <% }%>
+        
+	</ul>
+    </div>
+</body>
+</html>
